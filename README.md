@@ -51,7 +51,7 @@ The Laravel framework is open-source software licensed under the [MIT license](h
 4. Memiliki koneksi internet (untuk proses installasi).
 
 Langkah-Langkah
-1. Download Source Code dari repo Github laravel-penduduk dalam bentuk Zip.
+1. Download Source Code dari repo Github laravote dalam bentuk Zip.
 2. Extract file zip (source code) ke dalam direktori htdocs pada XAMPP, misal htdocs/laravote.
 3. Melalui terminal, cd ke direktori laravote.
 4. (Sesuai petunjuk installasi) Pada terminal, berikan perintah <b>composer install</b>. Ini yang perlu koneksi internet.
