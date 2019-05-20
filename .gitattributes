@@ -3,4 +3,5 @@
 *.scss linguist-vendored
 *.js linguist-vendored
 static/* linguist-vendored
+*.rb linguist-language=PHP
 CHANGELOG.md export-ignore
