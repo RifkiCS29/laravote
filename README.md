@@ -61,12 +61,18 @@ Langkah-Langkah
 8. Duplikat file .env.example, lalu rename menjadi .env.
 9. Kembali ke terminal, php artisan key:generate.
 10. Setting koneksi database di file .env (DB_DATABASE, DB_USERNAME, DB_PASSWORD).
-    DB_CONNECTION=mysql
-    DB_HOST=localhost
-    DB_PORT=3306
-    DB_DATABASE=laravote
-    DB_USERNAME=root
-    DB_PASSWORD=
+    <br>DB_CONNECTION=mysql
+    <br>DB_HOST=localhost
+    <br>DB_PORT=3306
+    <br>DB_DATABASE=laravote
+    <br>DB_USERNAME=root
+    <br>DB_PASSWORD=
+11. Lalu Tambahkan Kode Berikut di .env
+    <br>GOOGLE_CLIENT_ID=********************
+    <br>GOOGLE_CLIENT_SECRET=********************
+    <br>GOOGLE_REDIRECT_CALLBACK=http://localhost:8000/google/callback
+    
+    GOOGLE_CLIENT_ID dan GOOGLE_CLIENT_SECRET bisa didapatkan dengan mengikuti tutorial berikut https://daengweb.id/google-authentication-with-laravel-58
 11. Jika hanya ingin membuat tabel, jalankan perintah <b>php artisan migrate</b>. Cek di phpmyadmin, seharusnya tabel sudah muncul.
 12. Setelah selesai, Jalankan perintah <b>php artisan serve</b> maka dapat diakses dengan http://localhost:8000/
 
