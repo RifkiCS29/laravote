@@ -74,7 +74,10 @@ Langkah-Langkah
     
     GOOGLE_CLIENT_ID dan GOOGLE_CLIENT_SECRET bisa didapatkan dengan mengikuti tutorial berikut https://daengweb.id/google-authentication-with-laravel-58
 11. Jika hanya ingin membuat tabel, jalankan perintah <b>php artisan migrate</b>. Cek di phpmyadmin, seharusnya tabel sudah muncul.
-12. Setelah selesai, Jalankan perintah <b>php artisan serve</b> maka dapat diakses dengan http://localhost:8000/
+12. Jalankan perintah <b>php artisan db:seed</b> untuk mengisi tabel users yang digunakan untuk proses login
+    <br>EMAIL = rifki@admin.com
+    <br>PASSWORD = admin
+13. Setelah selesai, Jalankan perintah <b>php artisan serve</b> maka dapat diakses dengan http://localhost:8000/
 
 SEKIAN PENJELASAN DARI SAYA, TERIMAKASIH. Created by <b>RIFKI</b>
 
