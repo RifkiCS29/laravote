@@ -34,7 +34,7 @@
                                     </td>
                                     <td>{{$candidate->nama_ketua.' dan '.$candidate->nama_wakil}}</td>
                                     <td>{{$candidate->users->count()}} Suara</td>
-                                    <td>{{number_format(($candidate->users->count()/(\App\User::where('status','SUDAH')->count()))*100)}} %</td>
+                                    <td>{{number_format(($candidate->users->count()/$jumlah)*100)}} %</td>
                                 </tr>
                                 @endforeach
                                 <tfoot>

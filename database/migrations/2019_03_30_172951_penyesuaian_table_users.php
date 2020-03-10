@@ -18,7 +18,7 @@ class PenyesuaianTableUsers extends Migration
             $table->text('address');
             $table->string('phone');
             $table->string('roles');
-            $table->integer('candidate_id')->unsigned();
+            $table->integer('candidate_id')->unsigned()->nullable();
             $table->enum('status',['BELUM','SUDAH']);
 
             $table->foreign('candidate_id')->references('id')->on('candidates')->onDelete('cascade');
