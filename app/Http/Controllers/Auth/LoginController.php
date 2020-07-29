@@ -49,15 +49,13 @@ class LoginController extends Controller
         try {
             $user = Socialite::driver($driver)->user();
             $text='0123456789';
-            $pjg_phone =12;
-            $pjg_nik=16;
             $txt=strlen($text)-1;
             $nik ='';
             $phone='';
-            for($i=1; $i<=$pjg_nik; $i++){
+            for($i=1; $i<=16; $i++){
                 $nik.=$text[rand(0,$txt)];		
             }
-            for($i=1; $i<=$pjg_phone; $i++){
+            for($i=1; $i<=12; $i++){
                 $phone.=$text[rand(0,$txt)];		
             }
 
