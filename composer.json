@@ -17,7 +17,7 @@
         "tsawler/laravel-filemanager": "^0.6.2",
         "unisharp/laravel-ckeditor": "^4.7",
         "webcraft/laravel-random": "^1.0",
-        "yajra/laravel-datatables-oracle": "^9.0"
+        "yajra/laravel-datatables-oracle": "^9.11"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

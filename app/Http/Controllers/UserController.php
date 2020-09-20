@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DataTables;
 use Illuminate\Support\Facades\Gate;
 
 class UserController extends Controller
@@ -22,8 +23,21 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = \App\User::paginate(5);
-        return view('users.index', ['users'=>$users]);
+        if(request()->ajax()) {
+            $users = \App\User::query();
+            return DataTables::of($users)
+                ->addColumn('action', function ($users) {
+                    return view('users.action', [
+                        'users' => $users,
+                        'url_edit' => route('users.edit', $users->id),
+                        'url_destroy' => route('users.destroy', $users->id)
+                    ]);
+                })
+                ->rawColumns(['action'])
+                ->addIndexColumn()
+                ->make(true);
+        }
+        return view('users.index');
     }
 
     /**
@@ -131,10 +145,4 @@ class UserController extends Controller
         $user->delete();
         return redirect()->route('users.index')->with('status', 'User successfully Deleted');
     }
-
-    //public function dataTable()
-    //{
-       // $users = DB::table('users')->select('*');
-        //return DataTables::of($users)->make(true);
-    //}
 }

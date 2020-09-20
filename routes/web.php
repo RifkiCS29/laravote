@@ -26,7 +26,6 @@ Route::get('redirect/{driver}', 'Auth\LoginController@redirectToProvider')->name
 Route::get('{driver}/callback', 'Auth\LoginController@handleProviderCallback')->name('login.callback');
 
 Route::resource('users', 'UserController');
-//Route::get('/table/user', 'UserController@dataTable')->name('table.user');
 
 Route::resource('candidates', 'CandidateController');
 
